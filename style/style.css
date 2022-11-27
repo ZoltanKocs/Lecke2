@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+html{
+    font-size: 14px;
+}
+body{
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    background: rgb(12,9,9);
+    height:2000px;
+}
+#container{
+    max-width: 1200px;
+    height:auto;
+    margin:0;
+    margin-top: 80px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-left:1px solid rgba(255,255,255,0.2);
+    border-bottom: 3px solid white;
+}
+#mobile-header{
+    display:none;
+}
+#full-header{
+    width:99.99999%;
+}
+#content{
+   background: black; 
+   color: white;
+}
+#nav{
+    height: 100%;
+    margin: 0 auto;
+}
+.nav ul li{
+    float:left;
+    width: 24.99999%;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 30px 0px 30px 0;
+    margin:0 auto;
+    font-size: 34px;
+}
+.nav ul li::after{
+     content: '';
+     clear: both;
+     display: table;
+}
+.nav ul li a{
+    text-decoration: none;
+    color:white;
+}
+.Description img{
+    width:99.99999%;
+    height:auto;
+}
+#grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width:24.99999%;
+    margin:20px auto;
+    width:100%;
+
+}
+#grid-container .Description{
+    margin:5px 5px 0 5px;
+}
+#grid-container .Description img{
+    float:left;
+    width:49.99999%;
+    margin:0 auto;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+#grid-container .Description img::after{
+    content:'';
+    clear:both;
+    display:table;
+}
+#grid-container .Description p{
+    text-align: left;
+    line-height:1.5rem;
+}
+@media screen and (max-width: 850px) {
+    #grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width:49.99999%;
+        margin: 0 auto;
+        width:100%
+    }
+    #grid-container .Description{
+        margin: 0 auto;
+    }
+    #grid-container .Description img{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    #grid-container .Description p{
+        text-align: left;
+        line-height:2rem;
+    }
+
+}
+@media screen and (max-width: 600px){
+    #grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width:100%;
+    }
+    .Description{
+        width:100%;
+        margin:0 auto;
+    }
+    .nav ul li{
+       float:none;
+       width:100%; 
+    }
+    .nav{
+        position: sticky;
+        top:0;
+        display:block;
+        background:black;
+    }
+    #full-header{
+        display:none;
+    }
+    #mobile-header{
+        display: block;
+        width:99.99999%;
+    }
+}
